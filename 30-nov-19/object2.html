@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object2</title>
+</head>
+<body>
+	</body>
+	<script>
+		//creation of objects
+		var obj={};
+		var output=" "+ typeof obj;
+		console.log(output);
+
+		//Adding properties to objects
+		var employee={};
+		employee.name="vinay";
+		employee.designation="Teamlead";
+		console.log(employee);
+
+		//Retrieving properties of objects 
+		var empName=employee.name;
+		output="EmpName:"+empName;
+		console.log(output);
+
+		//Declaring Object Literals 
+		var employee1={
+			name: "john",
+			age: 40,
+			designation: "Manager",
+			50:"something"
+		};
+		console.log(employee1);
+
+		//Access existing properties
+		console.log(employee1.name);
+
+		//Access Non Existing Properties
+		console.log(employee1.salary);
+
+		//Usage of Dot and [] notations
+		output=employee1["name"];
+		console.log(output);
+
+		//use of notation where dot is not used for invalid identifiers
+		output=employee1["50"];
+		console.log(output);
+
+		//Use of [] Notation for accessing dynamic 
+		var emp={
+			name:"abc",
+			age:40
+		};
+		var myName="age"; //dynamic value
+		//output=emp.myName;
+		output=emp[myName];
+		console.log(output);
+
+		//Nested Objects creation
+		var student={
+			name:"veena",
+			age:25,
+			dept:"cse",
+			address:{
+				city:"Hyd",
+				state:"Telangana",
+				country:"India"
+			}
+		};
+		console.log(student.address.city);
+
+		console.log(student.address["country"]);
+
+		student.address.street="KPHB";
+		console.log(student.address.street);
+
+		var student1={
+			name:"sony",
+			age:25
+		};
+		var student2={
+			name:"sony",
+			age:25
+		};
+		student2=student1;
+		if(student1 === student2)
+		{
+			console.log("Both are Equal");
+		}
+		else
+		{
+			console.log("They are not Equal");
+		}
+	</script>
+
+
+</html>
